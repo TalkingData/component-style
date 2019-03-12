@@ -16,6 +16,11 @@
         <Button disabled>描边按钮</Button>
         <Button class="td-btn-primary">描边按钮</Button>
         <Button class="td-btn-primary" disabled>描边按钮</Button>
+        <Divider>填充按钮</Divider>
+        <Button type="primary">填充按钮</Button>
+        <Button type="primary" disabled>填充按钮</Button>
+        <Button type="primary" class="td-btn-shadow">填充按钮</Button>
+        <Button type="primary" class="td-btn-shadow" disabled>填充按钮</Button>
     </div>
 </template>
 <script>

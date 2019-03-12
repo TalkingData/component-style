@@ -18,6 +18,23 @@
     &:focus{
         box-shadow: none;
     }
+    &-primary{
+        color: #fff;
+        border-color: transparent;
+        &[disabled],&[disabled]:hover{
+            border-color: transparent;
+        }
+        &:hover{
+            color: #fff;
+            background: fade(@primary-color, 92%);
+            border-color: transparent;
+        }
+        &:active{
+            color: #fff;
+            background: fade(@primary-color, 68%);
+            border-color: transparent;
+        }
+    }
     &-text{
         color: fade(@text-color, 75%);
         border-color: transparent;
@@ -67,6 +84,30 @@
             border-color: @primary-color;
             color: @primary-color;
             background: fade(@primary-color, 10%);
+        }
+    }
+    &-shadow{
+        &[disabled],&[disabled]:hover,&[disabled]:active{
+            box-shadow: none;
+        }
+        box-shadow:
+                rgba(0,0,0,0.14) 0 1px 1px 0,
+                rgba(0,0,0,0.12) 0 2px 1px -1px,
+                rgba(0,0,0,0.2) 0 1px 3px 0;
+        &:hover{
+            box-shadow:
+                    rgba(0,0,0,0.14) 0 4px 5px 0,
+                    rgba(0,0,0,0.12) 0 1px 10px 0,
+                    rgba(0,0,0,0.2) 0 2px 4px -1px;
+        }
+        &:active{
+            box-shadow:
+                    rgba(0,0,0,0.14) 0 4px 5px 0,
+                    rgba(0,0,0,0.12) 0 1px 10px 0,
+                    rgba(0,0,0,0.2) 0 2px 4px -1px;
+        }
+        &:focus{
+            box-shadow: inherit;
         }
     }
 }
