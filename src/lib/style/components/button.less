@@ -15,6 +15,10 @@
         &:focus{
             box-shadow: none;
         }
+        &[disabled],&[disabled]:hover{
+            color: fade(@text-color, 35%);
+            background: fade(@text-color, 6%);
+        }
     }
 }
 
@@ -22,6 +26,14 @@
     &-text{
         &-primary{
             color: @primary-color;
+            &:hover{
+                color: @primary-color;
+                background: fade(@primary-color, 6%);
+            }
+            &:active{
+                color: @primary-color;
+                background: fade(@primary-color, 10%);
+            }
         }
     }
 }
