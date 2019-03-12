@@ -1,16 +1,35 @@
 .ivu-btn{
+    color: fade(@text-color, 75%);
+    border-color: fade(@text-color, 15%);
+    &[disabled],&[disabled]:hover{
+        color: fade(@text-color, 35%);
+        background: fade(@text-color, 6%);
+    }
+    &:hover{
+        background: fade(@text-color, 6%);
+        color: inherit;
+        border-color: fade(@text-color, 15%);
+    }
+    &:active{
+        background: fade(@text-color, 10%);
+        color: inherit;
+        border-color: fade(@text-color, 15%);
+    }
     &:focus{
         box-shadow: none;
     }
     &-text{
         color: fade(@text-color, 75%);
+        border-color: transparent;
         &:hover{
             color: inherit;
             background: fade(@text-color, 6%);
+            border-color: transparent;
         }
         &:active{
             color: inherit;
             background: fade(@text-color, 10%);
+            border-color: transparent;
         }
         &:focus{
             box-shadow: none;
@@ -34,6 +53,20 @@
                 color: @primary-color;
                 background: fade(@primary-color, 10%);
             }
+        }
+    }
+    &-primary{
+        border-color: @primary-color;
+        color: @primary-color;
+        &:hover{
+            border-color: @primary-color;
+            color: @primary-color;
+            background: fade(@primary-color, 6%);
+        }
+        &:active{
+            border-color: @primary-color;
+            color: @primary-color;
+            background: fade(@primary-color, 10%);
         }
     }
 }
