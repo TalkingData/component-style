@@ -1,12 +1,7 @@
-.td-btn{
-    &-text{
-        &-primary{
-            color: @primary-color;
-        }
-    }
-}
-
 .ivu-btn{
+    &:focus{
+        box-shadow: none;
+    }
     &-text{
         color: fade(@text-color, 75%);
         &:hover{
@@ -16,6 +11,17 @@
         &:active{
             color: inherit;
             background: fade(@text-color, 10%);
+        }
+        &:focus{
+            box-shadow: none;
+        }
+    }
+}
+
+.td-btn{
+    &-text{
+        &-primary{
+            color: @primary-color;
         }
     }
 }
