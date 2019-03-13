@@ -26,8 +26,16 @@ const router = new VueRouter({
             component: (resolve) => require(['./routers/input.vue'], resolve)
         },
         {
+            path: '/dropdown',
+            component: (resolve) => require(['./routers/dropdown.vue'], resolve)
+        },
+        {
             path: '/select',
             component: (resolve) => require(['./routers/select.vue'], resolve)
+        },
+        {
+            path: '/radio',
+            component: (resolve) => require(['./routers/radio.vue'], resolve)
         },
     ]
 });
