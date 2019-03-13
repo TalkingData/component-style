@@ -1,11 +1,33 @@
 .ivu-select{
-	&-selection{
-		&:hover{
-			border-color: @primary-color;
-		}
-	}
+    &-selection{
+        &:hover{
+            border-color: @primary-color;
+        }
+    }
+
+    &-item{
+        &-selected, &-selected:hover{
+            font-weight: bold;
+        }
+    }
+    &-multiple{
+        .ivu-tag{
+            border-radius: 24px;
+            background: fade(@text-color, 6%);
+            border-color: transparent;
+            i{
+                border-radius: 50%;
+                background-color: fade(@text-color, 55%);
+                color: #fff;
+                transform: none;
+            }
+        }
+    }
 }
 
 .ivu-select-visible .ivu-select-selection{
-	box-shadow: 0 0 0 1px @primary-color;
+    box-shadow: 0 0 0 1px @primary-color;
+}
+.ivu-select-multiple .ivu-select-item-selected{
+    background-color: @background-color-select-hover;
 }
