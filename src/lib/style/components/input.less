@@ -1,0 +1,15 @@
+.ivu-input {
+    color: fade(@text-color, 75%);
+
+    &:hover{
+        border-color: @primary-color;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 1px @primary-color;
+    }
+}
+
+.ivu-form-item-error .ivu-input:focus{
+    box-shadow: 0 0 0 1px @error-color;
+}
