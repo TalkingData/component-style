@@ -1,0 +1,60 @@
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner{
+    background: @primary-color;
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner > .ivu-steps-icon.ivu-icon-ios-checkmark, .ivu-steps-item.ivu-steps-status-finish .ivu-steps-head-inner span{
+    color: #fff;
+}
+.ivu-steps .ivu-steps-head-inner{
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    border: none;
+}
+.ivu-steps .ivu-steps-head-inner > .ivu-steps-icon.ivu-icon{
+    font-size: 28px;
+}
+.ivu-steps-item.ivu-steps-status-wait .ivu-steps-head-inner{
+    background-color: fade(@text-color, 10%);
+    span{
+        color: #fff;
+    }
+}
+.ivu-steps .ivu-steps-title{
+    font-size: 16px;
+    color: fade(@text-color, 75%);
+    font-weight: 400;
+}
+.ivu-steps .ivu-steps-content{
+    color: fade(@text-color, 55%);
+}
+.ivu-steps-item.ivu-steps-status-process .ivu-steps-title{
+    color: @text-color;
+    font-weight: 600;
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-title{
+    color: fade(@text-color, 75%);
+}
+.ivu-steps-item.ivu-steps-status-wait .ivu-steps-title{
+    color: fade(@text-color, 55%);
+}
+.ivu-steps-item.ivu-steps-status-finish .ivu-steps-content, .ivu-steps-item.ivu-steps-status-wait .ivu-steps-content{
+    color: fade(@text-color, 55%);
+}
+.ivu-steps-item.ivu-steps-status-process .ivu-steps-content{
+    color: fade(@text-color, 75%);
+}
+.ivu-steps-horizontal .ivu-steps-content{
+    padding-left: 40px;
+}
+
+.ivu-steps.ivu-steps-small .ivu-steps-head-inner{
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+}
+.ivu-steps .ivu-steps-head{
+    top: -4px;
+}
+.ivu-steps-vertical .ivu-steps-tail{
+    left: 15px;
+}
