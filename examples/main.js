@@ -73,6 +73,10 @@ const router = new VueRouter({
             path: '/transfer',
             component: (resolve) => require(['./routers/transfer.vue'], resolve)
         },
+        {
+            path: '/upload',
+            component: (resolve) => require(['./routers/upload.vue'], resolve)
+        },
     ]
 });
 
