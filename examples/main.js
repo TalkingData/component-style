@@ -49,6 +49,10 @@ const router = new VueRouter({
             path: '/form',
             component: (resolve) => require(['./routers/form.vue'], resolve)
         },
+        {
+            path: '/switch',
+            component: (resolve) => require(['./routers/switch.vue'], resolve)
+        },
     ]
 });
 
