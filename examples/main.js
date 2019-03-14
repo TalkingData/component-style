@@ -53,6 +53,10 @@ const router = new VueRouter({
             path: '/switch',
             component: (resolve) => require(['./routers/switch.vue'], resolve)
         },
+        {
+            path: '/tabs',
+            component: (resolve) => require(['./routers/tabs.vue'], resolve)
+        },
     ]
 });
 
