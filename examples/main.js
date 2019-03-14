@@ -69,6 +69,10 @@ const router = new VueRouter({
             path: '/steps',
             component: (resolve) => require(['./routers/steps.vue'], resolve)
         },
+        {
+            path: '/transfer',
+            component: (resolve) => require(['./routers/transfer.vue'], resolve)
+        },
     ]
 });
 
