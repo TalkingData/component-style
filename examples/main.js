@@ -61,6 +61,10 @@ const router = new VueRouter({
             path: '/tag',
             component: (resolve) => require(['./routers/tag.vue'], resolve)
         },
+        {
+            path: '/modal',
+            component: (resolve) => require(['./routers/modal.vue'], resolve)
+        },
     ]
 });
 
