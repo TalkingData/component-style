@@ -77,6 +77,10 @@ const router = new VueRouter({
             path: '/upload',
             component: (resolve) => require(['./routers/upload.vue'], resolve)
         },
+        {
+            path: '/alert',
+            component: (resolve) => require(['./routers/alert.vue'], resolve)
+        },
     ]
 });
 
