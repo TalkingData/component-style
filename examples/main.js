@@ -57,6 +57,10 @@ const router = new VueRouter({
             path: '/tabs',
             component: (resolve) => require(['./routers/tabs.vue'], resolve)
         },
+        {
+            path: '/tag',
+            component: (resolve) => require(['./routers/tag.vue'], resolve)
+        },
     ]
 });
 
