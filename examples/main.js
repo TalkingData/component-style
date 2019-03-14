@@ -81,6 +81,10 @@ const router = new VueRouter({
             path: '/alert',
             component: (resolve) => require(['./routers/alert.vue'], resolve)
         },
+        {
+            path: '/message',
+            component: (resolve) => require(['./routers/message.vue'], resolve)
+        },
     ]
 });
 
