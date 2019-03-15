@@ -89,6 +89,10 @@ const router = new VueRouter({
             path: '/notice',
             component: (resolve) => require(['./routers/notice.vue'], resolve)
         },
+        {
+            path: '/poptip',
+            component: (resolve) => require(['./routers/poptip.vue'], resolve)
+        },
     ]
 });
 
