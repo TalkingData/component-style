@@ -101,6 +101,10 @@ const router = new VueRouter({
             path: '/page',
             component: (resolve) => require(['./routers/page.vue'], resolve)
         },
+        {
+            path: '/slider',
+            component: (resolve) => require(['./routers/slider.vue'], resolve)
+        },
     ]
 });
 
