@@ -109,6 +109,10 @@ const router = new VueRouter({
             path: '/progress',
             component: (resolve) => require(['./routers/progress.vue'], resolve)
         },
+        {
+            path: '/table',
+            component: (resolve) => require(['./routers/table.vue'], resolve)
+        },
     ]
 });
 
