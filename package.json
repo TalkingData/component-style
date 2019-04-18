@@ -15,7 +15,7 @@
   },
   "author": "Aresn",
   "dependencies": {
-    "iview": "^3.2.2",
+    "iview": "^3.4.0",
     "vue": "^2.6.7"
   },
   "devDependencies": {
