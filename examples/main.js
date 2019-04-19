@@ -123,6 +123,10 @@ const router = new VueRouter({
     ]
 });
 
+router.afterEach(_ => {
+    window.scrollTo(0, 0);
+});
+
 const app = new Vue({
     router: router,
     render: h => h(App)
