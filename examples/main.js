@@ -4,7 +4,14 @@
 import 'babel-polyfill';
 import VueRouter from 'vue-router';
 import App from './app.vue';
+import iView from 'iview'
 
+Vue.use(iView, {
+    select: {
+        arrow: 'md-arrow-dropdown',
+        arrowSize: 20
+    }
+});
 import './styles/index.less';
 
 Vue.use(VueRouter);

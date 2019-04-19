@@ -9,9 +9,10 @@
                 <Input placeholder="请输入内容" />
             </FormItem>
             <FormItem prop="error" required label="Error 报错" error="输入内容出现错误" show-message>
-                <Input v-model="error" placeholder="请输入内容" />
+                <Input v-model="form.error" placeholder="请输入内容" />
             </FormItem>
         </Form>
+
         <Divider>文本框组合</Divider>
         <Input v-model="value11">
             <span slot="prepend">http://</span>
@@ -37,6 +38,37 @@
             </Select>
             <Button slot="append" icon="ios-search"></Button>
         </Input>
+        
+        <Divider>尺寸 </Divider>
+        <Input v-model="value11" size="large" placeholder="large size" style='margin-bottom:20px' />
+        <br>
+        <Input v-model="value11" placeholder="default size" style='margin-bottom:20px'/>
+         <br>
+        <Input v-model="value11" size="small" placeholder="small size" />
+
+         
+
+         <Divider>带Icon的输入框 </Divider>
+         <Input v-model="value11" icon="ios-clock-outline" placeholder="Enter something..." style="width: 100%" />
+      
+        <Divider>前缀和后缀图标 </Divider>
+        <div>
+            Props：
+            <Input prefix="ios-contact" placeholder="Enter name" style="width: auto" />
+            <Input suffix="ios-search" placeholder="Enter text" style="width: auto" />
+        </div>
+        <div style="margin-top: 6px">
+            Slots：
+            <Input placeholder="Enter name" style="width: auto">
+                <Icon type="ios-contact" slot="prefix" />
+            </Input>
+            <Input placeholder="Enter text" style="width: auto">
+                <Icon type="ios-search" slot="suffix" />
+            </Input>
+        </div>
+        <Divider>可清空  </Divider>
+        <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px" />
+
     </div>
 </template>
 <script>
