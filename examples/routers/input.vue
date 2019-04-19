@@ -66,9 +66,15 @@
                 <Icon type="ios-search" slot="suffix" />
             </Input>
         </div>
-        <Divider>可清空  </Divider>
+        <Divider>可清空</Divider>
         <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px" />
-
+        <Divider>带有数字</Divider>
+        <div class="app-desc">
+            需设置 <strong>slot: suffix</strong>，并设置类名 <strong>.td-input-max-length</strong>
+        </div>
+        <Input v-model="value4" style="width: 200px" placeholder="带有数字限制的输入框" :maxlength="16">
+            <span class="td-input-max-length" slot="suffix">{{ value4.length }}/16</span>
+        </Input>
     </div>
 </template>
 <script>
@@ -83,7 +89,8 @@
                 value13: '',
                 select1: 'http',
                 select2: 'com',
-                select3: 'day'
+                select3: 'day',
+                value4: ''
             }
         }
     }
