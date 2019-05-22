@@ -5,7 +5,7 @@ const rename = require('gulp-rename');
 const Config = require('../src/config');
 
 gulp.task('compile-css', () => {
-    return gulp.src([`../src/lib/style/index.less`])
+    return gulp.src(['../src/lib/style/index.less'])
         .pipe(less())
         .pipe(cssmin())
         .pipe(rename(`${Config.filename}.css`))
