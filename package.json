@@ -1,7 +1,7 @@
 {
-  "name": "iview-demo",
-  "main": "./dist/iview-demo.min.js",
-  "version": "0.0.1",
+  "name": "td-component",
+  "main": "./dist/iview-demo.css",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git@github.com:TalkingData/vue-component-template.git"
