@@ -24,6 +24,25 @@
                 {{ item.label }}
             </Option>
         </Select>
+        <Divider>尺寸</Divider>
+        <Select v-model="model2" size="small" style="width:100px">
+            <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        </Select>
+        <Select v-model="model3" style="width:100px">
+            <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        </Select>
+        <Select v-model="model4" size="large" style="width:100px">
+            <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
+        </Select>
+        <Divider>分组</Divider>
+        <Select v-model="model7" style="width:200px">
+            <OptionGroup label="Hot Cities">
+                <Option v-for="item in cityList1" :value="item.value" :key="item.value">{{ item.label }}</Option>
+            </OptionGroup>
+            <OptionGroup label="Other Cities">
+                <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
+            </OptionGroup>
+        </Select>
     </div>
 </template>
 <script>
@@ -57,7 +76,39 @@
                     }
                 ],
                 model1: '',
-                model10: ['选项 1', '选项 3']
+                model10: ['选项 1', '选项 3'],
+                model2: '',
+                model3: '',
+                model4: '',
+                cityList1: [
+                    {
+                        value: 'New York',
+                        label: 'New York'
+                    },
+                    {
+                        value: 'London',
+                        label: 'London'
+                    },
+                    {
+                        value: 'Sydney',
+                        label: 'Sydney'
+                    }
+                ],
+                cityList2: [
+                    {
+                        value: 'Ottawa',
+                        label: 'Ottawa'
+                    },
+                    {
+                        value: 'Paris',
+                        label: 'Paris'
+                    },
+                    {
+                        value: 'Canberra',
+                        label: 'Canberra'
+                    }
+                ],
+                model7: ''
             }
         }
     }

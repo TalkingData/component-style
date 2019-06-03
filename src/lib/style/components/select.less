@@ -23,6 +23,57 @@
             }
         }
     }
+
+    &-single &-selection{
+        .@{select-prefix-cls}-placeholder, .@{select-prefix-cls}-selected-value{
+            padding-left: 12px;
+            padding-right: 24px;
+        }
+    }
+
+    &-large&-single &-selection{
+        .@{select-prefix-cls}-placeholder, .@{select-prefix-cls}-selected-value{
+            font-size: 16px;
+            padding-left: 16px;
+        }
+    }
+    &-large&-multiple &-selection{
+        .@{select-prefix-cls}-placeholder, .@{select-prefix-cls}-selected-value{
+            font-size: 16px;
+        }
+    }
+    &-small&-single &-selection{
+        .@{select-prefix-cls}-placeholder, .@{select-prefix-cls}-selected-value{
+            font-size: 13px;
+        }
+    }
+
+    &-small&-multiple &-selection{
+        min-height: @input-height-small;
+        border-radius: @btn-border-radius-small;
+
+        .@{select-prefix-cls}-placeholder, .@{select-prefix-cls}-selected-value{
+            font-size: 13px;
+        }
+    }
+
+    &-group{
+        &-title{
+            padding-left: 16px;
+            font-size: 14px;
+        }
+        .ivu-select-item{
+            padding-left: 32px;
+        }
+    }
+    &-single &-prefix{
+        padding-left: 12px;
+        padding-right: 6px;
+        i{
+            color: #808695;
+            font-size: 16px;
+        }
+    }
 }
 
 .ivu-select-visible .ivu-select-selection{
