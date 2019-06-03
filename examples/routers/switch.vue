@@ -18,6 +18,10 @@
             <span slot="open">ON</span>
             <span slot="close">OFF</span>
         </i-switch>
+        <Divider>尺寸</Divider>
+        <i-switch size="large" />
+        <i-switch />
+        <i-switch size="small" />
     </div>
 </template>
 <script>

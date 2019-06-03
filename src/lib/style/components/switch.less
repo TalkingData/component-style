@@ -1,0 +1,31 @@
+.ivu-switch{
+    width: 48px;
+    &-inner{
+        font-size: 12px;
+    }
+
+    &-checked{
+        &:after{
+            left: 27px;
+        }
+    }
+    &:active&-checked{
+        &:after{
+            left: 19px;
+        }
+    }
+
+    &-small{
+        width: 32px;
+    }
+    &-small&-checked{
+        &:after{
+            left: 17px;
+        }
+    }
+    &-small:active&-checked{
+        &:after{
+            left: 15px;
+        }
+    }
+}
