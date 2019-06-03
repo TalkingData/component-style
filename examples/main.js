@@ -4,7 +4,7 @@
 import 'babel-polyfill';
 import VueRouter from 'vue-router';
 import App from './app.vue';
-import iView from 'iview'
+import iView from 'iview';
 
 Vue.use(iView, {
     select: {

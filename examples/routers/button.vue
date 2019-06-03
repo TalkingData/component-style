@@ -26,6 +26,10 @@
         <Button type="primary" disabled>填充按钮</Button>
         <Button type="primary" class="td-btn-shadow">填充按钮</Button>
         <Button type="primary" class="td-btn-shadow" disabled>填充按钮</Button>
+        <Divider>按钮尺寸</Divider>
+        <Button type="primary" size="small">小号按钮</Button>
+        <Button type="primary">中号按钮</Button>
+        <Button type="primary" size="large">大号按钮</Button>
     </div>
 </template>
 <script>

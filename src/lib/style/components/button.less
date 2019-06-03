@@ -56,6 +56,14 @@
             background: fade(@text-color, 6%);
         }
     }
+
+    .button-size(@btn-padding-base; @btn-font-size; @btn-border-radius);
+    &-small{
+        .button-size(@btn-padding-small; 13px; @btn-border-radius-small);
+    }
+    &-large{
+        .button-size(@btn-padding-large; @btn-font-size-large; @btn-border-radius);
+    }
 }
 
 .td-btn{
