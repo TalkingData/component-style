@@ -30,6 +30,59 @@
         <Button type="primary" size="small">小号按钮</Button>
         <Button type="primary">中号按钮</Button>
         <Button type="primary" size="large">大号按钮</Button>
+        <Divider>按钮样式</Divider>
+        <div>
+            <Button type="primary" shape="circle" icon="md-add"></Button>
+            <Button type="primary" icon="md-add">图标按钮</Button>
+            <Button type="primary">
+                菜单按钮
+                <Icon type="md-arrow-dropdown" />
+            </Button>
+            <Button class="td-btn-primary">
+      <span>
+        <Icon type="md-add" />
+        图标按钮
+      </span>
+            </Button>
+            <Button type="text" class="td-btn-text-primary">
+      <span>
+        <Icon type="md-add" />
+        图标按钮
+      </span>
+            </Button>
+            <br><br>
+            <Button shape="circle" icon="md-add"></Button>
+            <Button icon="md-add">图标按钮</Button>
+            <Button>
+                菜单按钮
+                <Icon type="md-arrow-dropdown" />
+            </Button>
+            <Button class="td-btn-primary">
+      <span style="color:#2185f0">
+        <Icon type="md-add" />
+        图标按钮
+      </span>
+            </Button>
+            <Button type="text">
+      <span>
+        <Icon type="md-add" />
+        图标按钮
+      </span>
+            </Button>
+            <br><br>
+            <Button shape="circle" icon="md-add" class="td-btn-shadow"></Button>
+            <Button class="td-btn-shadow" icon="md-add">图标按钮</Button>
+            <Button class="td-btn-shadow">
+                菜单按钮
+                <Icon type="md-arrow-dropdown" />
+            </Button>
+            <Button class="td-btn-shadow" type="text">
+      <span>
+        <Icon type="md-add" />
+        图标按钮
+      </span>
+            </Button>
+        </div>
     </div>
 </template>
 <script>
