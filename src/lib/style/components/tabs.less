@@ -1,3 +1,27 @@
 .ivu-tabs-nav .ivu-tabs-tab{
-    //margin-right: 40px;  // todo
+    padding: 8px 0;
+    margin-right: 40px;
+}
+.ivu-tabs-ink-bar{
+    display: none;
+}
+.ivu-tabs-tab-active{
+    &:after{
+        content: '';
+        display: block;
+        height: 3px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: @primary-color;
+    }
+}
+
+.ivu-tabs-card{
+    .ivu-tabs-tab-active{
+        &:after{
+            display: none;
+        }
+    }
 }
