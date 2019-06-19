@@ -20,7 +20,7 @@
          <Select v-model="model1" style="width:200px">
             <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" slot="prefix" size="small" />
             <Option v-for="item in cityList" :value="item.value" :key="item.value">
-                 <img src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" style='width:12px'/>
+                 <img src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"/>
                 {{ item.label }}
             </Option>
         </Select>
