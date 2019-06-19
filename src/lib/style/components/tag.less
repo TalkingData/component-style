@@ -1,33 +1,43 @@
 .ivu-tag{
     &-closable:not(.ivu-tag-dot):not(.ivu-tag-border){
         border-radius: 22px;
-        .ivu-icon-ios-close{
-            transform: none;
-            background: fade(@text-color, 55%);
-            color: #fff;
-            border-radius: 50%;
-        }
     }
     &-closable:not(.ivu-tag-dot):not(.ivu-tag-border):not(.ivu-tag-primary):not(.ivu-tag-success):not(.ivu-tag-warning):not(.ivu-tag-error){
         background: fade(@text-color, 6%);
     }
+    &-text{
+        color: fade(@text-color, 75%);
+    }
+    .ivu-icon-ios-close{
+        top:-2px;
+        &::before{
+            content:"\F378"
+        }
+    }
+    i.ivu-tag-color-default{
+        &::before{
+            content:"\F379";
+        }
+    }
 }
+
+
 
 .td-tag{
     &-size{
         &-large{
             font-size: 14px;
-            color: fade(@text-color, 75%);
             height: 32px;
             line-height: 32px;
             padding: 0 12px;
+            &::after{
+                right: 30px;
+            }
         }
         &-default{
             font-size: 13px;
-            color: fade(@text-color, 75%);
         }
         &-small{
-            color: fade(@text-color, 75%);
             font-size: 12px;
         }
     }

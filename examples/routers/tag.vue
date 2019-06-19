@@ -1,5 +1,9 @@
 <template>
     <div>
+        <Tag closable>标签文字</Tag>
+        <Tag type="border" closable class='td-tag-size-large'>标签文字</Tag>
+        <Tag type="border" closable >标签文字</Tag>
+        <Tag color="primary" closable>标签文字</Tag>
         <Divider>标签</Divider>
         <div>
             <Tag color="default">default</Tag>
