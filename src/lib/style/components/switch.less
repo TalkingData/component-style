@@ -1,10 +1,14 @@
 .ivu-switch{
     width: 48px;
+    border: 1px solid #dcdee2;
+    background-color: #dcdee2;
     &-inner{
         font-size: 12px;
     }
 
     &-checked{
+        border-color: @primary-color;
+        background-color: @primary-color;
         &:after{
             left: 27px;
         }
