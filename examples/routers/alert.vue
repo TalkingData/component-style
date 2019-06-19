@@ -61,7 +61,7 @@
             An error prompt
             <span slot="desc">
             Custom error description copywriting.
-        </span>
+            </span>
         </Alert>
     </div>
 </template>
