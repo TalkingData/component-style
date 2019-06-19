@@ -26,6 +26,12 @@
                 <Radio label="爪哇犀牛"></Radio>
                 <Radio label="印度黑羚"></Radio>
             </RadioGroup>
+            <br><br>
+            <RadioGroup v-model="disabledGroup" type="button">
+                <Radio label="金斑蝶"></Radio>
+                <Radio label="爪哇犀牛" disabled></Radio>
+                <Radio label="印度黑羚"></Radio>
+            </RadioGroup>
         </div>
     </div>
 </template>
