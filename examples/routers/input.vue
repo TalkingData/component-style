@@ -24,7 +24,7 @@
                 <Option value="http">http://</Option>
                 <Option value="https">https://</Option>
             </Select>
-            <Select v-model="select2" slot="append" style="width: 70px">
+            <Select v-model="select2" slot="append" style="width: 80px">
                 <Option value="com">.com</Option>
                 <Option value="org">.org</Option>
                 <Option value="io">.io</Option>
@@ -54,13 +54,18 @@
         <Divider>前缀和后缀图标 </Divider>
         <div>
             Props：
-            <Input prefix="ios-contact" placeholder="Enter name" style="width: auto" />
-            <Input suffix="ios-search" placeholder="Enter text" style="width: auto" />
+            <Input prefix="ios-contact" placeholder="Enter name" style="width: auto">
+             <Icon custom="i-td i-td-account_circle_px" slot="prefix" />
+            </Input>
+
+            <Input suffix="ios-search" placeholder="Enter text" style="width: auto">
+             <Icon type="ios-search" slot="suffix" />
+            </Input>
         </div>
         <div style="margin-top: 6px">
             Slots：
             <Input placeholder="Enter name" style="width: auto">
-                <Icon type="ios-contact" slot="prefix" />
+                <Icon custom="i-td i-td-account_circle_px" slot="prefix" />
             </Input>
             <Input placeholder="Enter text" style="width: auto">
                 <Icon type="ios-search" slot="suffix" />
