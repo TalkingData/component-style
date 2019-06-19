@@ -7,6 +7,7 @@
                 title="标题名称"
                 @on-ok="ok"
                 @on-cancel="cancel">
+            <Icon slot="close" custom="i-td i-td-clear_px" />
             <p>Content of dialog</p>
             <p>Content of dialog</p>
             <p>Content of dialog</p>

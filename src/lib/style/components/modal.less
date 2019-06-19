@@ -1,9 +1,14 @@
 .ivu-modal{
     &-header{
-        padding: 16px 16px 17px;
+        padding: 16px 16px 17px 24px;
     }
     &-close{
-        top: 11px;
+        top: 16px;
+        right: 20px;
+        color: fade(#17233D, 55%);
+        i{
+            font-size: 18px;
+        }
     }
     &-body{
         padding: 24px;
@@ -13,7 +18,7 @@
         button{
             height: 32px;
             line-height: 1;
-            font-size: 12px;
+            font-size: 14px;
         }
     }
     &-confirm{
@@ -23,6 +28,12 @@
             font-size: 12px;
         }
     }
+}
+.ivu-modal-header p, .ivu-modal-header-inner{
+    font-size: 16px;
+    font-weight: 600;
+    color: #17233D;
+    line-height: 24px;
 }
 
 .td-modal-compact{
