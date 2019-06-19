@@ -23,6 +23,7 @@
                 @on-ok="ok"
                 class-name="td-modal-compact"
                 @on-cancel="cancel">
+            <Icon slot="close" custom="i-td i-td-clear_px" />
             <p>Content of dialog</p>
             <p>Content of dialog</p>
             <p>Content of dialog</p>
