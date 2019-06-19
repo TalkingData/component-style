@@ -13,14 +13,14 @@
         
         <Select v-model="model1" style="width:200px" prefix="md-mail">
             <Option  v-for="(item,index) in cityList" :key='index' :value="item.value">
-                <Icon type="md-mail" />
+                <Icon type="md-mail" class='td-select-icon'/>
                 {{item.label}}
             </Option>
         </Select>
          <Select v-model="model1" style="width:200px">
             <Avatar src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" slot="prefix" size="small" />
             <Option v-for="item in cityList" :value="item.value" :key="item.value">
-                 <img src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar"/>
+                 <img src="https://dev-file.iviewui.com/userinfoPDvn9gKWYihR24SpgC319vXY8qniCqj4/avatar" class='td-select-img'/>
                 {{ item.label }}
             </Option>
         </Select>
