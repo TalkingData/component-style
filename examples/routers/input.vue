@@ -54,13 +54,10 @@
         <Divider>前缀和后缀图标 </Divider>
         <div>
             Props：
-            <Input prefix="ios-contact" placeholder="Enter name" style="width: auto">
+            <Input placeholder="Enter name" style="width: auto">
              <Icon custom="i-td i-td-account_circle_px" slot="prefix" />
             </Input>
-
-            <Input suffix="ios-search" placeholder="Enter text" style="width: auto">
-             <Icon type="ios-search" slot="suffix" />
-            </Input>
+            <Input suffix="ios-search" placeholder="Enter text" style="width: auto"/>
         </div>
         <div style="margin-top: 6px">
             Slots：
