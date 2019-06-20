@@ -1,89 +1,55 @@
 <template>
     <div>
-        <Divider>基础表单</Divider>
-        <Form :model="formLeft" label-position="left" :label-width="100">
-            <FormItem label="Title">
-                <Input v-model="formLeft.input1"></Input>
+        <Form :model="form" :label-width="140" label-position="left">
+            <FormItem required>
+                <span slot="label">
+                    人群名称
+                    <Tooltip content="提示" placement="top">
+                        <Icon color="#aeb2bb" custom="i-td i-td-help_outline_px" />
+                    </Tooltip>
+                </span>
+                <Input v-model="form.name" placeholder="例：营销潜客人群" />
             </FormItem>
-            <FormItem label="Title name">
-                <Input v-model="formLeft.input2"></Input>
-            </FormItem>
-            <FormItem label="Aligned title">
-                <Input v-model="formLeft.input3"></Input>
-            </FormItem>
-        </Form>
-        <Form :model="formRight" label-position="right" :label-width="100">
-            <FormItem label="Title">
-                <Input v-model="formRight.input1"></Input>
-            </FormItem>
-            <FormItem label="Title name">
-                <Input v-model="formRight.input2"></Input>
-            </FormItem>
-            <FormItem label="Aligned title">
-                <Input v-model="formRight.input3"></Input>
-            </FormItem>
-        </Form>
-        <Form :model="formTop" label-position="top">
-            <FormItem label="Title">
-                <Input v-model="formTop.input1"></Input>
-            </FormItem>
-            <FormItem label="Title name">
-                <Input v-model="formTop.input2"></Input>
-            </FormItem>
-            <FormItem label="Aligned title">
-                <Input v-model="formTop.input3"></Input>
-            </FormItem>
-        </Form>
-        <Divider>校验</Divider>
-        <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
-            <FormItem label="Name" prop="name">
-                <Input v-model="formValidate.name" placeholder="Enter your name"></Input>
-            </FormItem>
-            <FormItem label="E-mail" prop="mail">
-                <Input v-model="formValidate.mail" placeholder="Enter your e-mail"></Input>
-            </FormItem>
-            <FormItem label="City" prop="city">
-                <Select v-model="formValidate.city" placeholder="Select your city">
-                    <Option value="beijing">New York</Option>
-                    <Option value="shanghai">London</Option>
-                    <Option value="shenzhen">Sydney</Option>
-                </Select>
-            </FormItem>
-            <FormItem label="Date">
-                <Row>
-                    <Col span="11">
-                        <FormItem prop="date">
-                            <DatePicker type="date" placeholder="Select date" v-model="formValidate.date"></DatePicker>
-                        </FormItem>
-                    </Col>
-                    <Col span="2" style="text-align: center">-</Col>
-                    <Col span="11">
-                        <FormItem prop="time">
-                            <TimePicker type="time" placeholder="Select time" v-model="formValidate.time"></TimePicker>
-                        </FormItem>
-                    </Col>
-                </Row>
-            </FormItem>
-            <FormItem label="Gender" prop="gender">
-                <RadioGroup v-model="formValidate.gender">
-                    <Radio label="male">Male</Radio>
-                    <Radio label="female">Female</Radio>
-                </RadioGroup>
-            </FormItem>
-            <FormItem label="Hobby" prop="interest">
-                <CheckboxGroup v-model="formValidate.interest">
-                    <Checkbox label="Eat"></Checkbox>
-                    <Checkbox label="Sleep"></Checkbox>
-                    <Checkbox label="Run"></Checkbox>
-                    <Checkbox label="Movie"></Checkbox>
-                </CheckboxGroup>
-            </FormItem>
-            <FormItem label="Desc" prop="desc">
-                <Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..."></Input>
+            <FormItem required>
+                <span slot="label">
+                    人群描述
+                </span>
+                <Input v-model="form.desc" placeholder="例：营销潜客人群" />
             </FormItem>
             <FormItem>
-                <Button type="primary" @click="handleSubmit('formValidate')">Submit</Button>
-                <Button @click="handleReset('formValidate')" style="margin-left: 8px">Reset</Button>
+                <span slot="label">
+                    种子人群
+                </span>
+                <Select v-model="form.select">
+                    <Option value="东直门商圈人群">东直门商圈人群</Option>
+                    <Option value="海淀区商圈人群">海淀区商圈人群</Option>
+                </Select>
+                <div class="td-form-desc">
+                    由于人群样本数不能低于1000且不能高于10,000,000，系统自动过滤不符合条件的人群
+                </div>
+            </FormItem>
+            <FormItem>
+                <span slot="label">
+                    人群范围
+                </span>
+                <RadioGroup v-model="form.radio">
+                    <Radio label="value1">包含种子人群</Radio>
+                    <Radio label="value2">不包含种子人群</Radio>
+                </RadioGroup>
+            </FormItem>
+            <FormItem>
+                <span slot="label">
+                    输出人群数
+                </span>
+                <Slider v-model="form.slider"></Slider>
+                <div class="td-form-desc">
+                    <span style="float: left">100万</span>
+                    <span style="float: right">2000万</span>
+                </div>
+            </FormItem>
+            <FormItem>
+                <Button type="primary">确认</Button>
+                <Button type="text">取消</Button>
             </FormItem>
         </Form>
     </div>
@@ -92,75 +58,17 @@
     export default {
         data () {
             return {
-                formLeft: {
-                    input1: '',
-                    input2: '',
-                    input3: ''
-                },
-                formRight: {
-                    input1: '',
-                    input2: '',
-                    input3: ''
-                },
-                formTop: {
-                    input1: '',
-                    input2: '',
-                    input3: ''
-                },
-                formValidate: {
+                form: {
                     name: '',
-                    mail: '',
-                    city: '',
-                    gender: '',
-                    interest: [],
-                    date: '',
-                    time: '',
-                    desc: ''
-                },
-                ruleValidate: {
-                    name: [
-                        { required: true, message: 'The name cannot be empty', trigger: 'blur' }
-                    ],
-                    mail: [
-                        { required: true, message: 'Mailbox cannot be empty', trigger: 'blur' },
-                        { type: 'email', message: 'Incorrect email format', trigger: 'blur' }
-                    ],
-                    city: [
-                        { required: true, message: 'Please select the city', trigger: 'change' }
-                    ],
-                    gender: [
-                        { required: true, message: 'Please select gender', trigger: 'change' }
-                    ],
-                    interest: [
-                        { required: true, type: 'array', min: 1, message: 'Choose at least one hobby', trigger: 'change' },
-                        { type: 'array', max: 2, message: 'Choose two hobbies at best', trigger: 'change' }
-                    ],
-                    date: [
-                        { required: true, type: 'date', message: 'Please select the date', trigger: 'change' }
-                    ],
-                    time: [
-                        { required: true, type: 'string', message: 'Please select time', trigger: 'change' }
-                    ],
-                    desc: [
-                        { required: true, message: 'Please enter a personal introduction', trigger: 'blur' },
-                        { type: 'string', min: 20, message: 'Introduce no less than 20 words', trigger: 'blur' }
-                    ]
+                    desc: '',
+                    select: '东直门商圈人群',
+                    radio: 'value1',
+                    slider: 60
                 }
-            }
+            };
         },
         methods: {
-            handleSubmit (name) {
-                this.$refs[name].validate((valid) => {
-                    if (valid) {
-                        this.$Message.success('Success!');
-                    } else {
-                        this.$Message.error('Fail!');
-                    }
-                })
-            },
-            handleReset (name) {
-                this.$refs[name].resetFields();
-            }
+
         }
-    }
+    };
 </script>
