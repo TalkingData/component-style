@@ -11,7 +11,8 @@
          <Divider>带图标和头像的选项</Divider>
       
         
-        <Select v-model="model1" style="width:200px" prefix="md-mail">
+        <Select v-model="model1" style="width:200px" >
+            <Icon type="md-mail" slot="prefix" style='margin-left:10px'/>
             <Option  v-for="(item,index) in cityList" :key='index' :value="item.value">
                 <Icon type="md-mail" class='td-select-icon'/>
                 {{item.label}}
