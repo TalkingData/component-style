@@ -15,16 +15,25 @@
 .ivu-poptip-body{
     padding: 12px 16px 16px;
 }
-.ivu-poptip-confirm .ivu-poptip-body-message{
-    font-size: 14px;
-    color: fade(@text-color, 75%);
-    line-height: 22px;
-    padding-left: 28px;
-}
-.ivu-poptip-confirm .ivu-poptip-body .ivu-icon{
-    font-size: 20px;
-    margin-top: 2px;
-}
-.ivu-poptip-confirm .ivu-poptip-body{
-    padding: 12px 14px 16px;
+.ivu-poptip-confirm {
+    .ivu-poptip-body-message{
+        font-size: 14px;
+        color: fade(@text-color, 75%);
+        line-height: 22px;
+        padding-left: 28px;
+    }
+    .ivu-poptip-body{
+        padding: 16px 14px 5px;
+        .ivu-icon{
+            font-size: 20px;
+            margin-top: 2px;
+            font-family:'i-td';
+        }
+        .ivu-icon-ios-help-circle:before{
+            content:"\F361";
+        }
+    }
+    .ivu-poptip-footer{
+        padding: 8px 16px 14px;
+    }
 }
