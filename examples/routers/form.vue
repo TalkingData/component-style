@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Form :model="form" :label-width="140" label-position="left">
+        <Form :model="form" label-position="top">
             <FormItem required>
                 <span slot="label">
                     人群名称

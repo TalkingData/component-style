@@ -11,16 +11,28 @@
     export default {
         methods: {
             info () {
-                this.$Message.info('This is a info tip');
+                this.$Message.info({
+                    content: '提示内容',
+                    duration: 1000
+                });
             },
             success () {
-                this.$Message.success('This is a success tip');
+                this.$Message.success({
+                    content: '提示内容',
+                    duration: 1000
+                });
             },
             warning () {
-                this.$Message.warning('This is a warning tip');
+                this.$Message.warning({
+                    content: '提示内容',
+                    duration: 1000
+                });
             },
             error () {
-                this.$Message.error('This is an error tip');
+                this.$Message.error({
+                    content: '提示内容',
+                    duration: 1000
+                });
             }
         }
     }
