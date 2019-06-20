@@ -1,15 +1,39 @@
-.ivu-page-item-active{
-    background-color: @primary-color;
-}
-.ivu-page-item a{
-    color: fade(@text-color, 75%);
+.ivu-page{
+    &-total{
+        color: fade(@text-color, 75%);
+    }
+    &-item{
+        &-active{
+            background-color: @primary-color;
+        }
+        a{
+            color: fade(@text-color, 75%);
+        }
+        &-jump-prev, .ivu-page-item-jump-next{
+            border-color: #dcdee2;
+        }
+    }
+    &-options{
+        &-sizer{
+            .ivu-select-arrow{
+                right:6px;
+            }
+            .ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+                padding-right: 30px;
+            }
+        }
+        &-elevator {
+            color: fade(@text-color, 75%);
+            input{
+                color: fade(@text-color, 75%);
+            }
+        }
+        
+    }
 }
 .ivu-page-item-active a, .ivu-page-item-active:hover a{
     color: #fff;
 }
 .ivu-page.mini .ivu-page-prev, .ivu-page.mini .ivu-page-next{
     border: 1px solid @border-color-base;
-}
-.ivu-page-item-jump-prev, .ivu-page-item-jump-next{
-    border-color: #dcdee2;
 }
