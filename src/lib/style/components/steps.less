@@ -11,7 +11,11 @@
     border: none;
 }
 .ivu-steps .ivu-steps-head-inner > .ivu-steps-icon.ivu-icon{
-    font-size: 28px;
+    font-size: 24px;
+}
+.ivu-steps-item.ivu-steps-custom .ivu-steps-head-inner > .ivu-steps-icon{
+    width: 24px;
+    height: 24px;
 }
 .ivu-steps-item.ivu-steps-status-wait .ivu-steps-head-inner{
     background-color: fade(@text-color, 10%);
@@ -57,4 +61,16 @@
 }
 .ivu-steps-vertical .ivu-steps-tail{
     left: 15px;
+}
+
+.ivu-steps-item.ivu-steps-custom .ivu-steps-head-inner > .ivu-steps-icon{
+    position: relative;
+    top: 7px;
+    left: 5px;
+}
+.ivu-steps .ivu-steps-main{
+    margin-left: 8px;
+}
+.ivu-steps-horizontal .ivu-steps-tail{
+    left: 38px;
 }
