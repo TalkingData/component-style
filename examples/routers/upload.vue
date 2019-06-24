@@ -2,12 +2,18 @@
     <div>
     	<Divider>上传按钮</Divider>
         <Upload action="//jsonplaceholder.typicode.com/posts/" class="td-upload-with-btn">
-            <Button class="td-btn-primary" custom-icon="i-td i-td-upload_px">上传文件</Button>
+            <Button class="td-btn-primary">
+                <Icon custom="i-td i-td-upload_px" size="18" />
+                上传文件
+            </Button>
             <div class="td-upload-desc">支持扩展名：.rar .zip .doc .pdf</div>
         </Upload>
         <Divider>上传图片-列表</Divider>
         <Upload action="//jsonplaceholder.typicode.com/posts/" class="td-upload-with-btn">
-            <Button class="td-btn-primary" custom-icon="i-td i-td-upload_px">上传文件</Button>
+            <Button class="td-btn-primary">
+                <Icon custom="i-td i-td-upload_px" size="18" />
+                上传文件
+            </Button>
             <div class="td-upload-desc">支持扩展名：.rar .zip .doc .pdf</div>
         </Upload>
         <div class="td-upload-list">
@@ -68,7 +74,10 @@
             </div>
             <div class="td-upload-avatar-main">
                 <Upload action="//jsonplaceholder.typicode.com/posts/" class="td-upload-with-btn">
-                    <Button class="td-btn-primary" custom-icon="i-td i-td-upload_px">上传文件</Button>
+                    <Button class="td-btn-primary">
+                        <Icon custom="i-td i-td-upload_px" size="18" />
+                        上传文件
+                    </Button>
                     <div class="td-upload-desc">支持扩展名 .jpg、.png，图片大小不超过2M</div>
                 </Upload>
             </div>
@@ -79,7 +88,10 @@
             </div>
             <div class="td-upload-avatar-main">
                 <Upload action="//jsonplaceholder.typicode.com/posts/" class="td-upload-with-btn">
-                    <Button class="td-btn-primary" custom-icon="i-td i-td-upload_px">上传文件</Button>
+                    <Button class="td-btn-primary">
+                        <Icon custom="i-td i-td-upload_px" size="18" />
+                        上传文件
+                    </Button>
                     <div class="td-upload-desc">支持扩展名 .jpg、.png，图片大小不超过2M</div>
                 </Upload>
             </div>
