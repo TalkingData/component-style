@@ -1,7 +1,14 @@
 .ivu-btn{
+    height: 32px;
+    line-height: 30px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
     font-weight: 500;
     color: fade(@text-color, 75%);
     border-color: fade(@text-color, 15%);
+    & > span{
+        vertical-align: baseline;
+    }
     &[disabled],&[disabled]:hover{
         color: fade(@text-color, 35%);
         background: fade(@text-color, 6%);
@@ -39,6 +46,8 @@
     &-text{
         color: fade(@text-color, 75%);
         border-color: transparent;
+        padding-left: 8px;
+        padding-right: 8px;
         &:hover{
             color: inherit;
             background: fade(@text-color, 6%);
@@ -61,14 +70,34 @@
     .button-size(@btn-padding-base; @btn-font-size; @btn-border-radius);
     &-small{
         .button-size(@btn-padding-small; 13px; @btn-border-radius-small);
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: 24px;
+        line-height: 22px !important;
+        .ivu-icon{
+            position: relative;
+            top: -1px;
+        }
     }
     &-large{
         .button-size(@btn-padding-large; @btn-font-size-large; @btn-border-radius);
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        height: 40px;
+        line-height: 38px !important;
+        .ivu-icon{
+            position: relative;
+            top: -1px;
+        }
     }
 
     .ivu-icon{
-        line-height: inherit;
+
     }
+}
+.ivu-btn-circle.ivu-btn-icon-only.ivu-btn-large, .ivu-btn-circle-outline.ivu-btn-icon-only.ivu-btn-large{
+    width: 40px;
+    height: 40px;
 }
 
 .td-btn{
