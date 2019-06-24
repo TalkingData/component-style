@@ -8,7 +8,10 @@
     font-size: 14px;
     color: fade(@text-color, 75%);
     line-height: 22px;
-    font-weight: bold;
+    font-weight: 500;
+}
+.ivu-form-label-top .ivu-form-item-label{
+    font-size: 13px;
 }
 
 .td-form{
@@ -17,5 +20,24 @@
         color: fade(@text-color, 55%);
         line-height: 21px;
         margin: 4px 0;
+    }
+}
+
+.ivu-form-item-required .ivu-form-item-label:before{
+    display: none;
+}
+.ivu-form-item-required .ivu-form-item-label:after{
+    content: '*';
+    display: inline-block;
+    margin-right: 4px;
+    line-height: 1;
+    font-family: SimSun;
+    font-size: 14px;
+    color: #e62d2d;
+}
+
+.td-form-hide-required{
+    .ivu-form-item-required .ivu-form-item-label:after{
+        display: none;
     }
 }

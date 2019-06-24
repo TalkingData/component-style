@@ -14,7 +14,7 @@
                 <span slot="label">
                     人群描述
                 </span>
-                <Input v-model="form.desc" placeholder="例：营销潜客人群" />
+                <Input v-model="form.desc" type="textarea" placeholder="例：营销潜客人群" />
             </FormItem>
             <FormItem>
                 <span slot="label">
