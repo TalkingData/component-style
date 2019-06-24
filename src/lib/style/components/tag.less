@@ -9,7 +9,7 @@
         color: fade(@text-color, 75%);
     }
     .ivu-icon-ios-close{
-        top:-2px;
+        top:-1px;
         color: fade(@text-color, 35%)!important;
         &::before{
             content:"\F378"
@@ -19,6 +19,9 @@
         &::before{
             content:"\F379";
         }
+    }
+    &-primary .ivu-icon-ios-close{
+        color: fade(#fff, 55%) !important;
     }
 }
 
