@@ -1,17 +1,17 @@
 {
   "name": "td-component",
-  "main": "./dist/iview-demo.css",
-  "version": "1.0.0",
+  "main": "dist/component-style.css",
+  "version": "1.0.1",
   "repository": {
     "type": "git",
     "url": "git@github.com:TalkingData/vue-component-template.git"
   },
-  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --content-base test/ --open --inline --hot --compress --history-api-fallback --config build/webpack.dev.config.js",
     "build:style": "gulp --gulpfile build/build-style.js",
     "build:prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config build/webpack.prod.config.js",
-    "build": "npm run build:style"
+    "build": "npm run build:style",
+    "prepare": "npm run build"
   },
   "author": "Aresn",
   "dependencies": {
