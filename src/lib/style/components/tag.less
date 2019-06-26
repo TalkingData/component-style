@@ -1,4 +1,7 @@
 .ivu-tag{
+    font-size: 13px;
+    line-height: 24px;
+    height:24px;
     &-closable:not(.ivu-tag-dot):not(.ivu-tag-border){
         border-radius: 22px;
     }
@@ -8,9 +11,12 @@
     &-text{
         color: fade(@text-color, 75%);
     }
+   
     .ivu-icon-ios-close{
         top:-1px;
         color: fade(@text-color, 35%)!important;
+        margin-left: 8px;
+      
         &::before{
             content:"\F378"
         }
@@ -24,7 +30,12 @@
         color: fade(#fff, 55%) !important;
     }
 }
-
+:root .ivu-tag .ivu-icon-ios-close{
+    font-size:12px;
+}
+.ivu-tag-border.ivu-tag-closable .ivu-icon-ios-close{
+    margin-left: 8px !important;
+}
 
 
 .td-tag{
