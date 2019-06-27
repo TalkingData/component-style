@@ -28,7 +28,7 @@
             </div>
             <div class="td-upload-list-item">
                 <span class="td-upload-list-item-img-empty">
-                    <Icon custom="i-td i-td-email_px" />
+                    <Icon custom="i-td i-td-wallpaper_px" />
                 </span>
                 <span class="td-upload-list-item-title">
                     <Progress :percent="75" hide-info :stroke-width="6" />
@@ -70,7 +70,7 @@
         <Divider>上传头像</Divider>
         <div class="td-upload-avatar">
             <div class="td-upload-avatar-img td-upload-avatar-img-empty">
-                <Icon custom="i-td i-td-account_circle_px" />
+                <Icon custom="i-td i-td-person_px" />
             </div>
             <div class="td-upload-avatar-main">
                 <Upload action="//jsonplaceholder.typicode.com/posts/" class="td-upload-with-btn">

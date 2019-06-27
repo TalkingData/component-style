@@ -6,6 +6,7 @@
     font-weight: 500;
     color: fade(@text-color, 75%);
     border-color: fade(@text-color, 15%);
+
     &-default .ivu-icon{
         color: fade(@text-color, 55%);
     }
@@ -93,16 +94,14 @@
             top: -1px;
         }
     }
-
-    .ivu-icon{
-
-    }
 }
 .ivu-btn-circle.ivu-btn-icon-only.ivu-btn-large, .ivu-btn-circle-outline.ivu-btn-icon-only.ivu-btn-large{
     width: 40px;
     height: 40px;
 }
-
+.ivu-btn-icon-only.ivu-btn-circle > .ivu-icon{
+    vertical-align: inherit;
+}
 .td-btn{
     &-text{
         &-primary{
@@ -120,6 +119,9 @@
     &-primary{
         border-color: @primary-color;
         color: @primary-color;
+        i{
+             color: @primary-color!important;
+        }
         &:hover{
             border-color: @primary-color;
             color: @primary-color;
