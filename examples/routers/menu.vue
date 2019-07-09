@@ -1,11 +1,6 @@
 <style scoped>
-  .layout-con{
-    height: 100%;
-    width: 100%;
-  }
-  .menu-item .ivu-menu-submenu-title span{
+   .td-layout-menu-item .ivu-menu-submenu-title span{
     display: inline-block;
-    
     overflow: hidden;
     width: 90px;
     text-overflow: ellipsis;
@@ -13,18 +8,22 @@
     vertical-align: bottom;
     transition: width .2s ease .2s;
   }
-  .collapsed-menu .ivu-menu-submenu-title span{
+  .td-layout-menu .ivu-menu-submenu-title span{
     width: 0;
     transition: width .2s ease;
   }
-  .collapsed-menu .ivu-menu-submenu-title i{
+  .td-layout-menu .ivu-menu-submenu-title i{
     transform: translateX(10px);
     transition: font-size .2s ease, transform .2s ease;
     vertical-align: middle;
     font-size:16px;
   }
-  .collapsed-menu .ivu-menu-submenu-title .ivu-menu-submenu-title-icon{
+  .td-layout-menu .ivu-menu-submenu-title .ivu-menu-submenu-title-icon{
     display:none;
+  }
+  .td-layout-menu .ivu-menu-submenu-title{
+    background: #2185f0;
+    color: #fff;
   }
 </style>
 <template>
@@ -234,41 +233,78 @@
                 <hr>
    
                  <div class="layout">
-                    <Layout :style="{minHeight: '100vh'}" >
-                            <Sider collapsible :collapsed-width="78" v-model="isCollapsed" @on-collapse='LayoutCollapse'>
-                                <Menu active-name="1-1" :open-names="names" width="auto" :class="menuitemClasses" @on-open-change='menuChange' :theme="'dark'" ref="menu">
-                                <Submenu name="1">
-                                    <template slot="title">
-                                    <Icon type="ios-podium" />
-                                    <span>一级菜单</span>  
-                                    </template>
-                                    <MenuItem name="1-1">二级菜单</MenuItem>
-                                    <MenuItem name="1-2">二级菜单</MenuItem>
-                                    <MenuItem name="1-3">二级菜单</MenuItem>
-                                    <MenuItem name="1-4">二级菜单</MenuItem>
-                                </Submenu>
-                                <Submenu name="2">
-                                    <template slot="title">
-                                    <Icon custom="i-td i-td-account_circle_px" />
-                                    <span>一级菜单</span>  
-                                    </template>
-                                    <MenuItem name="2-1">二级菜单</MenuItem>
-                                    <MenuItem name="2-2">二级菜单</MenuItem>
-                                </Submenu>
-                                <Submenu name="3">
-                                    <template slot="title">
-                                    <Icon type="md-compass" />
-                                    <span>一级菜单</span>  
-                                    </template>
-                                    <MenuItem name="4-1">二级菜单</MenuItem>
-                                    <MenuItem name="4-2">二级菜单</MenuItem>
-                                    <MenuItem name="4-3">二级菜单</MenuItem>
-                                    <MenuItem name="4-4">二级菜单</MenuItem>
-                                </Submenu>
-                                </Menu>
-                            </Sider>
-                    </Layout>
-                </div>
+    <Layout :style="{minHeight: '100vh'}" class='td-layout-dark'>
+      <Sider collapsible :collapsed-width="78" v-model="isCollapsed" @on-collapse='LayoutCollapse' width="256px">
+        <Menu active-name="1-1" :open-names="names" width="auto" :class="menuitemClasses" @on-open-change='menuChange' :theme="'dark'" ref="menu">
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-podium" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="1-1">二级菜单</MenuItem>
+            <MenuItem name="1-2">二级菜单</MenuItem>
+            <MenuItem name="1-3">二级菜单</MenuItem>
+            <MenuItem name="1-4">二级菜单</MenuItem>
+          </Submenu>
+          <Submenu name="2">
+            <template slot="title">
+              <Icon custom="i-td i-td-account_circle_px" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="2-1">二级菜单</MenuItem>
+            <MenuItem name="2-2">二级菜单</MenuItem>
+          </Submenu>
+          <Submenu name="3">
+            <template slot="title">
+              <Icon type="md-compass" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="4-1">二级菜单</MenuItem>
+            <MenuItem name="4-2">二级菜单</MenuItem>
+            <MenuItem name="4-3">二级菜单</MenuItem>
+            <MenuItem name="4-4">二级菜单</MenuItem>
+          </Submenu>
+        </Menu>
+      </Sider>
+    </Layout>
+    <hr>
+         <!-- <div class="layout">
+    <Layout :style="{minHeight: '100vh'}" >
+      <Sider collapsible :collapsed-width="78" v-model="isCollapsed" @on-collapse='LayoutCollapse' width="256px">
+        <Menu active-name="1-1" :open-names="names" width="auto" :class="menuitemClasses" @on-open-change='menuChange' ref="menu">
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-podium" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="1-1">二级菜单</MenuItem>
+            <MenuItem name="1-2">二级菜单</MenuItem>
+            <MenuItem name="1-3">二级菜单</MenuItem>
+            <MenuItem name="1-4">二级菜单</MenuItem>
+          </Submenu>
+          <Submenu name="2">
+            <template slot="title">
+              <Icon custom="i-td i-td-account_circle_px" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="2-1">二级菜单</MenuItem>
+            <MenuItem name="2-2">二级菜单</MenuItem>
+          </Submenu>
+          <Submenu name="3">
+            <template slot="title">
+              <Icon type="md-compass" />
+              <span>一级菜单</span>  
+            </template>
+            <MenuItem name="4-1">二级菜单</MenuItem>
+            <MenuItem name="4-2">二级菜单</MenuItem>
+            <MenuItem name="4-3">二级菜单</MenuItem>
+            <MenuItem name="4-4">二级菜单</MenuItem>
+          </Submenu>
+        </Menu>
+      </Sider>
+    </Layout>
+  </div> -->
+  </div>
   </div>
 </template>
 <script>
@@ -278,7 +314,7 @@ export default {
 //       theme1: "light"
 //     };
 //   },
-   data () {
+    data () {
       return {
         isCollapsed: false,
         names:['1']
@@ -287,8 +323,8 @@ export default {
     computed: {
       menuitemClasses: function () {
         return [
-          'menu-item',
-          this.isCollapsed ? 'collapsed-menu' : ''
+          'td-layout-menu-item',
+          this.isCollapsed ? 'td-layout-menu' : ''
         ]
       }
     },
@@ -302,7 +338,7 @@ export default {
         if(data){
           this.names=[]
           this.$nextTick(() => {
-            this.$refs.topmenu.updateOpened()
+            this.$refs.menu.updateOpened()
           })
         }
       }
