@@ -1,4 +1,4 @@
-<style scoped>
+<style>
    .td-layout-menu-item .ivu-menu-submenu-title span{
     display: inline-block;
     overflow: hidden;
@@ -21,8 +21,10 @@
   .td-layout-menu .ivu-menu-submenu-title .ivu-menu-submenu-title-icon{
     display:none;
   }
-  .td-layout-menu .ivu-menu-submenu-title{
-    background: #2185f0;
+  .td-layout-menu .ivu-menu-submenu-title:hover{
+    background: #2185f0!important;
+  }
+   .td-layout-menu .ivu-menu-submenu-title:hover i{
     color: #fff;
   }
 </style>
