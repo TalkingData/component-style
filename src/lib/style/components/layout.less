@@ -1,16 +1,23 @@
-.ivu-layout-sider-trigger {
-    text-align: right;
-    padding-right: 20px;
-}
-
-.ivu-layout-sider-trigger-collapsed {
-    text-align: center;
-    padding-right: 0;
-}
-
 .ivu-layout-sider-children>.ivu-menu {
     margin-bottom: 49px;
 }
+
+.ivu-layout-sider {
+    .ivu-menu-vertical.ivu-menu-light:after {
+        background: transparent;
+    }
+
+    .ivu-menu-submenu-title span {
+        display: inline-block;
+        overflow: hidden;
+        width: 90px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+        transition: width 0.2s ease 0.2s;
+    }
+}
+
 
 .ivu-layout-sider-collapsed {
     width: 64px !important;
@@ -20,12 +27,36 @@
 
     .ivu-menu-submenu-title {
         line-height: 48px;
-        padding: 0!important;
+        padding: 0 !important;
         text-align: center;
+
+        span {
+            width: 0 !important;
+            transition: width 0.2s ease !important;
+        }
+
+        i {
+            transform: translateX(2px);
+            transition: font-size 0.2s ease, transform 0.2s ease;
+            vertical-align: middle;
+            font-size: 24px;
+        }
+
+        .ivu-menu-submenu-title-icon {
+            display: none;
+        }
     }
 }
 
+
+.ivu-layout-sider-trigger {
+    text-align: right;
+    padding-right: 20px;
+}
+
 .ivu-layout-sider-trigger-collapsed {
+    text-align: center;
+    padding-right: 0;
     width: 64px !important;
 }
 
@@ -33,21 +64,50 @@
     .ivu-layout-sider {
         background: #1c2b4f;
     }
+
     .ivu-layout-sider-trigger {
         background: #1c2b4f;
     }
+
     .ivu-layout-sider-collapsed {
-        
-        .ivu-menu-submenu-title{
-            i{
-                margin-right:0;
+
+        .ivu-menu-submenu-title {
+            i {
+                margin-right: 0;
             }
+
             &:hover {
                 background: #2185f0 !important;
-    
+
                 i {
                     color: #fff;
-                
+
+                }
+            }
+        }
+    }
+}
+
+.td-layout-light {
+    .ivu-layout-sider {
+        background: #fff;
+    }
+
+    .ivu-layout-sider-trigger {
+        background: #fff;
+        color: rgba(23, 35, 61, 0.55);
+    }
+
+    .ivu-layout-sider-collapsed {
+
+        .ivu-menu-submenu-title {
+            i {
+                margin-right: 0;
+            }
+
+            &:hover {
+                i {
+                    color: #2185f0;
                 }
             }
         }

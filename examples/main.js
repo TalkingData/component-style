@@ -10,6 +10,10 @@ Vue.use(iView, {
     select: {
         arrow: 'md-arrow-dropdown',
         arrowSize: 20
+    },
+    menu:{
+        customArrow:'i-td i-td-keyboard_arrow_down_',
+        arrowSize: 24
     }
 });
 import './styles/index.less';
