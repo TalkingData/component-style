@@ -262,6 +262,14 @@
                         @on-open-change="menuChange"
                         ref="menu2"
                     >
+                        <MenuItem name="0">
+                        <Icon
+                            custom="i-td i-td-social_poll"
+                            color='#172d3d8c'
+                        />
+                        <span>Dasboard
+                        </span>
+                        </MenuItem>
                         <Submenu name="1">
                             <template slot="title">
                                 <Icon custom="i-td i-td-social_poll" />
