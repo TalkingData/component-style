@@ -1,5 +1,5 @@
 <style>
-.td-layout-menu-item .ivu-menu-submenu-title span {
+/* .td-layout-menu-item .ivu-menu-submenu-title span {
     display: inline-block;
     overflow: hidden;
     width: 90px;
@@ -7,7 +7,7 @@
     white-space: nowrap;
     vertical-align: bottom;
     transition: width 0.2s ease 0.2s;
-}
+} */
 /* .td-layout-menu .ivu-menu-submenu-title span {
     width: 0;
     transition: width 0.2s ease;
