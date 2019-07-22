@@ -251,25 +251,18 @@
                 <Sider
                     collapsible
                     :collapsed-width="78"
-                    v-model="isCollapsed"
+                    v-model="isCollapsed2"
                     @on-collapse="LayoutCollapse2"
                     width="256px"
                 >
                     <Menu
                         active-name="1-1"
-                        :open-names="names"
+                        :open-names="names2"
                         width="auto"
-                        @on-open-change="menuChange"
+                        @on-open-change="menuChange2"
                         ref="menu2"
                     >
-                        <MenuItem name="0">
-                        <Icon
-                            custom="i-td i-td-social_poll"
-                            color='#172d3d8c'
-                        />
-                        <span>Dasboard
-                        </span>
-                        </MenuItem>
+
                         <Submenu name="1">
                             <template slot="title">
                                 <Icon custom="i-td i-td-social_poll" />
@@ -311,13 +304,20 @@ export default {
     data() {
         return {
             isCollapsed: false,
-            names: ['1']
+            names: ['1'],
+            isCollapsed2: false,
+            names2: ['1']
         };
     },
     methods: {
         menuChange(data) {
             if (data.length) {
                 this.isCollapsed = false;
+            }
+        },
+        menuChange2(data) {
+            if (data.length) {
+                this.isCollapsed2 = false;
             }
         },
         LayoutCollapse(data) {
@@ -330,7 +330,7 @@ export default {
         },
         LayoutCollapse2(data) {
             if (data) {
-                this.names = [];
+                this.names2 = [];
                 this.$nextTick(() => {
                     this.$refs.menu2.updateOpened();
                 });
